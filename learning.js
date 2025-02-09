@@ -72,3 +72,44 @@ while (numero < 10) {
     numero++;
 }
 
+// Eventos -> son acciones que se realizan en una página web. Algunos ejemplos de eventos son: click, mouseover, mouseout, keyup, keydown, etc.
+// Para añadir un evento a un elemento se usa el método addEventListener
+document.getElementById("boton").addEventListener("click", 
+    function() {
+        alert("has apretado el botón");
+    }
+);
+
+//clases -> son plantillas para crear objetos. Se usan para definir las propiedades y métodos de un objeto.
+class Persona {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    saludar() {
+        console.log("Hola, me llamo " + this.nombre + " y tengo " + this.edad + " años");
+    }
+}
+
+const persona1 = new Persona("Juan", 30);
+persona1.saludar();
+const persona2 = new Persona("Maria", 25);
+persona2.saludar();
+const persona3 = new Persona("Pedro", 35);
+persona3.saludar();
+
+let persona4 = {
+    nombre: "Juan",
+    edad: 30,
+    saludar: function() {
+        console.log("Hola, me llamo " + this.nombre + " y tengo " + this.edad + " años");
+    }
+};
+persona4.saludar();
+persona4.profesion = "programador";
+console.log(persona4.profesion);
+persona4.despedirse = function() {
+    console.log("Adios");
+}
+persona4.despedirse();
